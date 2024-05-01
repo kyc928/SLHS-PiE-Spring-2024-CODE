@@ -121,7 +121,7 @@ def ssspookyyyy(str: str) -> list:
     i = n
     while i > 0:
         for j in range(max(0, i - 4), i - 1):
-            chunk = s[j:i]
+            chunk = str[j:i]
             if len(chunk) < 2 or len(set(chunk)) == 1 and len(chunk) > 3:
                 continue
             if dp[i][0] == dp[j][0] + 1 and dp[i][1] == max(dp[j][1], len(chunk)):
